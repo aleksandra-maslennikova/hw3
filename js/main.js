@@ -32,9 +32,10 @@ console.log(arr);
     }*/
     
 
-let myObj = {};
+
 
 function simpleObjectGenerator(param1, param2, param3) {
+    let myObj = {};
     myObj.argument1 = param1;
     myObj.argument2 = param2;
     myObj.argument3 = param3;
@@ -57,11 +58,12 @@ console.log(simpleObjectGenerator(77, userNames, 'privet kak dela chto novogo'.t
 */
 
 var myName = { name: 'Oleg' };
-let myArr = {};
+
 function addNameToUser(key, value, obj){
-    myArr.name = obj.name;
-    myArr[key] = value;
-    return myArr;
+    let myObject = {};
+    myObject.name = obj.name;
+    myObject[key] = value;
+    return myObject;
 }
 console.log(addNameToUser('family', '%Lustenko%', myName));
 
@@ -75,18 +77,15 @@ console.log(addNameToUser('family', '%Lustenko%', myName));
 */
 
 function fizzBuzz(myNumber) {
-    let num;
+    let num = myNumber;
     if (myNumber%3 == 0 && myNumber%5 == 0){
         num ='FizzBuzz';
     }
     else if (myNumber%3 == 0){
         num = 'Fizz';
     }
-    else if (myNumber%5 == 0){
+    else if (!myNumber%5 == 0){
         num = 'Buzz';
-        }
-    else {
-        num = myNumber;
     }
     console.log(num);
 }
